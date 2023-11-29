@@ -11,20 +11,7 @@ const addStudentController = async (request, response) => {
           message: 'Send all required fields: Name, Email, Phone',
         });
       }
-      const newStudent = {
-        firstName: request.body.firstName,
-        lastName: request.body.lastName,
-        email: request.body.email,
-        gender: request.body.gender,
-        dateOfBirth: request.body.dateOfBirth,
-        nationality: request.body.nationality,
-        address: request.body.address,
-        phone: request.body.phone,
-        admissionDate: request.body.admissionDate,
-        courses: request.body.courses,
-      };
-  
-      const student = await Student.create(newStudent);
+      const student = await Student.create(request.body);
       return response.status(201).send(student);
     } catch (error) {
       console.log(error.message);

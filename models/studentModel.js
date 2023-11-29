@@ -15,7 +15,7 @@ const studentSchema = mongoose.Schema(
       required: true,
     },
     dateOfBirth: {
-      type: String,
+      type: Date,  // Change type to Date
       required: true,
     },
     nationality: {
@@ -35,7 +35,7 @@ const studentSchema = mongoose.Schema(
       required: true,
     },
     admissionDate: {
-      type: String,
+      type: Date,  // Change type to Date
       required: true,
     },
     course: {
