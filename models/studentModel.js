@@ -39,7 +39,7 @@ const studentSchema = mongoose.Schema(
       required: true,
     },
     courses: {
-      type: [String],
+      type: String,
       required: true,
     },
   },
