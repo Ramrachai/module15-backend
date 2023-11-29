@@ -38,7 +38,7 @@ const studentSchema = mongoose.Schema(
       type: Date,
       required: true,
     },
-    courses: {
+    course: {
       type: String,
       required: true,
     },
